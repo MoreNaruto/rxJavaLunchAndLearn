@@ -15,7 +15,7 @@ public class RxServiceTest {
 
     @Before
     public void setUp() {
-        subject = new RxService();
+        subject = new ZipRxService();
     }
 
     @Test
