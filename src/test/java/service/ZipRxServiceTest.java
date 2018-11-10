@@ -28,7 +28,7 @@ public class ZipRxServiceTest {
                 .get(0);
 
         assertEquals(users.size(), 2);
-        assertEquals(users.get(0).login, "kys");
-        assertEquals(users.get(1).login, "MoreNaruto");
+        assertEquals(users.get(0).getLogin(), "kys");
+        assertEquals(users.get(1).getLogin(), "MoreNaruto");
     }
 }

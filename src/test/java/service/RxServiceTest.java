@@ -25,6 +25,6 @@ public class RxServiceTest {
                 .values()
                 .get(0);
 
-        assertEquals(actualUser.id, 2292947);
+        assertEquals(actualUser.getId(), 2292947);
     }
 }
