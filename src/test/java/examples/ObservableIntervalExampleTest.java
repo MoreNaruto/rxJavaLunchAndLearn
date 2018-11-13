@@ -27,7 +27,8 @@ public class ObservableIntervalExampleTest {
         initMocks(this);
 
         testComputationScheduler = new TestScheduler();
-        subject = new ObservableIntervalExample(mockClass, testComputationScheduler);
+        RxJavaPlugins.setComputationSchedulerHandler(scheduler -> testComputationScheduler);
+        subject = new ObservableIntervalExample(mockClass);
     }
 
     @Test

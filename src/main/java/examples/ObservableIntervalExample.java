@@ -8,15 +8,13 @@ import java.util.concurrent.TimeUnit;
 public class ObservableIntervalExample {
 
     private MockClass mockClass;
-    private Scheduler scheduler;
 
-    public ObservableIntervalExample(MockClass mockClass, Scheduler scheduler) {
+    public ObservableIntervalExample(MockClass mockClass) {
         this.mockClass = mockClass;
-        this.scheduler = scheduler;
     }
 
     public void runInterval() {
-        Observable.interval( 30, TimeUnit.SECONDS, scheduler)
+        Observable.interval( 30, TimeUnit.SECONDS)
                 .take(5)
                 .subscribe(aLong -> mockClass.mockCalled());
     }
